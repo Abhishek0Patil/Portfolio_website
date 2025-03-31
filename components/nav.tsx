@@ -7,6 +7,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
   { name: "Home", href: "#" },
@@ -53,7 +54,7 @@ export function Nav() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-4">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -64,18 +65,22 @@ export function Nav() {
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
           <Link href="#contact">
             <Button onClick={(e) => scrollToSection(e, "#contact")}>Hire me</Button>
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </Button>
+        {/* Mobile Navigation */}
+        <div className="flex items-center md:hidden">
+          <ThemeToggle />
+          <Button variant="ghost" size="icon" className="ml-2" onClick={toggleMenu}>
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+        </div>
       </nav>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation Menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
@@ -105,4 +110,6 @@ export function Nav() {
     </motion.header>
   )
 }
+
+
 

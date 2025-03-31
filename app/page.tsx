@@ -17,42 +17,42 @@ const projects = [
     id: 1,
     title: "Brain Tumor Classification",
     category: "Deep Learning",
-    image: "/images/brain-tumor.jpg", // Update with your actual image path
+    image: "images/brain-tumor.jpg",
     demoUrl: "https://github.com/Abhishek0Patil",
   },
   {
     id: 2,
     title: "YouTube Video Transcribe Summarizer",
     category: "LLM & Gemini Pro",
-    image: "/images/youtube-summarizer.jpg", // Update with your actual image path
+    image: "/placeholder.svg?height=300&width=400",
     demoUrl: "https://github.com/Abhishek0Patil",
   },
   {
     id: 3,
     title: "Wafer Fault Detection System",
     category: "Machine Learning",
-    image: "/images/wafer-fault.jpg", // Update with your actual image path
+    image: "images/wafer-fault.jpg",
     demoUrl: "https://github.com/Abhishek0Patil",
   },
   {
     id: 4,
     title: "Portfolio Website",
     category: "Web Development",
-    image: "/images/portfolio.jpg", // Update with your actual image path
+    image: "/placeholder.svg?height=300&width=400",
     demoUrl: "https://github.com/Abhishek0Patil",
   },
   {
     id: 5,
     title: "Chronic Disease Prediction",
     category: "Machine Learning",
-    image: "/images/disease-prediction.jpg", // Update with your actual image path
+    image: "images/disease-prediction.jpg",
     demoUrl: "https://github.com/Abhishek0Patil",
   },
   {
     id: 6,
     title: "FastAPI Backend Services",
     category: "Backend Development",
-    image: "/images/fastapi.jpg", // Update with your actual image path
+    image: "/placeholder.svg?height=300&width=400",
     demoUrl: "https://github.com/Abhishek0Patil",
   },
 ]
@@ -100,7 +100,7 @@ export default function Home() {
                 decision-making in a dynamic environment.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="/resume.pdf" download="Abhishek_Patil.pdf">
+                <a href="/resume.pdf" download="Abhishek_Patil_Resume.pdf">
                   <Button>
                     <Download className="mr-2 h-4 w-4" />
                     Download CV
@@ -353,4 +353,6 @@ export default function Home() {
     </>
   )
 }
+
+
 
